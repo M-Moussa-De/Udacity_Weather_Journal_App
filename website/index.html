@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/udacity-3629124-3030264.png"
+        type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a3c1f32cfa.js"></script>
+    <title>Weather Journal App</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen p-4">
+    <div class="h-full mx-auto md:pt-16">
+        <!-- Query -->
+        <section>
+            <div class="w-full-xs md:w-1/2 mx-auto">
+                <form class="glass rounded">
+                    <h1 class="text-gray-300 bg-gray-900 text-center py-2 rounded-t-lg mb-10">
+                        Weather Journal App
+                    </h1>
+                    <div class="mb-4 w-3/5 mx-auto">
+                        <span
+                            class="error text-sm bg-red-600 text-gray-300 rounded-3xl text-center mx-auto block outline-none hidden py-2"></span>
+                        <input id="zip"
+                            class="bg-blue-100 text-center mt-2 w-full py-2 px-3 rounded-tr-3xl rounded-bl-3xl text-gray-700 focus:outline-none focus:shadow-outline"
+                            type="text" placeholder="Enter zip code here...">
+                    </div>
+                    <div class=" w-3/5 mx-auto">
+                        <input id="feeling"
+                            class="bg-blue-100 text-center rounded-tr-3xl rounded-bl-3xl w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                            type="text" placeholder="Your feeling...">
+                    </div>
+                    <div class=" w-2/5 mx-auto">
+                        <button id="submit"
+                            class="glass-btn text-sm md:text-lg my-4 bg-blue-500 hover:bg-blue-600 text-gray-300 uppercase py-2 px-4 rounded-tr-3xl rounded-bl-3xl focus:outline-none w-full"
+                            type="submit" onclick="event.preventDefault()">
+                            Generate
+                        </button>
+                    </div>
+                    <div id="info" class="hidden w-full text-xs text-gray-200 p-4">
+                        <p>
+                            <span class="text-red-400">*</span>
+                            Note: a zip code and country code should be provided in this form (e.g)
+                            12345,GB for Great Britain.
+                        </p>
+                        <p class="pb-3">Otherwise, it will be set to the USA by default.</p>
+                        <a href="https://www.iban.com/country-codes" class="text-red-600 text-sm underline"
+                            target="_blank">
+                            Get to know your country code!
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- End Query -->
+        <!-- Response -->
+        <section id="queryResult" class="hidden mt-3">
+            <div class="glass rounded-lg w-full-xs md:w-1/2 mx-auto text-gray-300">
+                <img id="icon" class="hidden block text-center mx-auto" alt="icon-forcast">
+                <div class="flex justify-around xs:font-sm sm:font-lg">
+                    <div class="temp text-center">
+                        <h2 id="temp" class="text-lg md:text-2xl font-bold"></h2>
+                        <p id="description" class="text-center pt-2 text-sm"></p>
+                    </div>
+                    <div class="city-date">
+                        <h2 id="location" class="text-lg md:text-2xl text-center font-bold"></h2>
+                        <p id="date" class="text-center pt-2 text-sm"></p>
+                    </div>
+                </div>
+                <div class="w-full mx-auto">
+                    <p id="feel" class="block text-center py-4"></p>
+                </div>
+            </div>
+        </section>
+        <!-- End Response -->
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

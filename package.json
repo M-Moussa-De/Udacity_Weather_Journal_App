@@ -1,0 +1,16 @@
+{
+  "name": "weather-journal-app",
+  "version": "1.0.0",
+  "description": "app to show the tempreture by using  API from openweathermap website ",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Mahmoud Moussa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "nodemon": "^2.0.15"
+  }
+}
