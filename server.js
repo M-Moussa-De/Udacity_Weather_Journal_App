@@ -13,8 +13,8 @@ let projectData = {};
 
 app.use(express.static("website"));
 
-app.listen(8000, () => {
-  console.log("server started on port: 8000");
+app.listen(3000, () => {
+  console.log("server started on port: 3000");
 });
 
 // Receiving The Data From The app.js File & Save It Into The Object projectData
